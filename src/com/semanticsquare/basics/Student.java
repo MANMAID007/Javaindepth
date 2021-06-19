@@ -14,18 +14,34 @@ class Student {
 	boolean international;
 	double tuitionFees = 12000.0, internationalFees = 5000.0;
 	
-	Student(String newName, String newGender, int newId,  int newAge, int newRank, long newPhone, float newGpa, char newDegree, boolean isInternational) {
-		name  = newName;
-		gender = newGender;
-		id = newId;
-		age = newAge;
-		rank = newRank;
-		phone = newPhone;
-		gpa = newGpa;
-		degree = newDegree;
-		international = isInternational;
+	Student(String name, String gender, int id,  int age, int rank, long phone, float gpa, char degree) {
+		this(name, gender, id, age, rank, phone, gpa, degree, false);
+	}
+	
+	Student(String name, String gender, int id,  int age, int rank, long phone, float gpa, char degree, boolean international) {
+		this.name  = name;
+		this.gender = gender;
+		this.id = id;
+		this.age = age;
+		this.rank = rank;
+		this.phone = phone;
+		this.gpa = gpa;
+		this.degree = degree;
+		this.international = international;
 		
 		compute();
+		
+		System.out.println("\nCount number: " + computeCount);
+		
+		System.out.println("\nname: " + this.name);
+		System.out.println("gender: " + this.gender);
+		System.out.println("id: " + this.id);
+		System.out.println("age: " + this.age);
+		System.out.println("rank: " + this.rank);
+		System.out.println("phone number: " + this.phone);
+		System.out.println("gpa: " + this.gpa);
+		System.out.println("degree: " + this.degree);
+		System.out.println("tution fees: " + tuitionFees);
 	}
 	
 	void compute(){
@@ -33,24 +49,17 @@ class Student {
 		if(international) {
 			tuitionFees = tuitionFees + internationalFees;
 		}
-		System.out.println("\nCount number: " + computeCount);
 		
-		System.out.println("\nname: " + name);
-		System.out.println("gender: " + gender);
-		System.out.println("id: " + id);
-		System.out.println("age: " + age);
-		System.out.println("rank: " + rank);
-		System.out.println("phone number: " + phone);
-		System.out.println("gpa: " + gpa);
-		System.out.println("degree: " + degree);
-		System.out.println("tution fees: " + tuitionFees);
 	}
 	
 	//static Student s2 = new Student();
 	
 	public static void main(String[] arg) {
-		Student s1 = new Student("John", "male", 1000, 18, 156,992667664352L, 3.8f, 'B', false);
+		Student s1 = new Student("John", "male", 1000, 18, 156,992667664352L, 3.8f, 'B');
 		
 		Student s2 = new Student("Ram", "male", 1010, 20, 106, 992667664542L, 3.4f, 'M', true);
+		
+		System.out.println("\nname of Student 1: " + s1.name);
+		System.out.println("\nname of Student 2: " + s2.name);
 	}
 }
