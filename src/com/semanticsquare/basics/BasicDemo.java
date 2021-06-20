@@ -1,5 +1,5 @@
 class BasicDemo {
-	static void print(){
+	/*static void print(){
 		System.out.println("Hello, my name is Youkti!");
 	}
 	
@@ -13,11 +13,11 @@ class BasicDemo {
 		System.out.println(intchar);
 	}
 	static void array(){
-		/*int[] scores = new int[4];
+		int[] scores = new int[4];
 		scores[0] = 90;
 		scores[1] = 40;
 		scores[2] = 80; 
-		scores[3] = 100;*/
+		scores[3] = 100;
 		//int[] scores =  new int[] {90, 40, 80, 100};
 		int[] scores =  {90, 40, 80, 100};
 		System.out.println("Score 1: " + scores[0]);
@@ -39,15 +39,23 @@ class BasicDemo {
 	static double avg(double x, double y) {
 		double sum = sum(x, y);
 		return sum/2;
-	}
+	}*/
 	public static void main(String[] arg) {
 		//print();
 		//primitives();
 		//array();
-		double d = sum(2.0, 3.0);
-		System.out.println(d);
-		double d2 = avg(2.0, 3.0);
-		System.out.println(d2);
+		//double d = sum(2.0, 3.0);
+		//System.out.println(d);
+		//double d2 = avg(2.0, 3.0);
+		//System.out.println(d2);
+		
+		int x = 30;
+		if(x >20){
+			x = x + 1;
+			} else {
+				x = x - 1;
+			}
+		System.out.println(x);
 	}
 	
 }
