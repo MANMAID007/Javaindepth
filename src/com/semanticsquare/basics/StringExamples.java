@@ -32,6 +32,19 @@ class StringExamples {
 		
 		//static method
 		System.out.println(String.valueOf(1.3));
+		
+		System.out.println("\n");
+		
+		StringBuffer sb = new StringBuffer(s); //StringBuilder
+		sb.append(" Good ").append("Morning...");
+		System.out.println("new string: " + sb.toString());
+		System.out.println("new string length: " + sb.length());
+		sb.delete(25,27);
+		System.out.println("new string: " + sb.toString());
+		System.out.println("new string length: " + sb.length());
+		sb.delete(20,25).insert(20,"sdffddg");
+		System.out.println("new string: " + sb.toString());
+		System.out.println("new string length: " + sb.length());
 	}
 	public static void main(String[] arg) {
 		stringexample();
