@@ -1,4 +1,6 @@
-class BasicDemo {
+package com.semanticsquare.basics;
+
+public class BasicDemo {
 	/*static void print(){
 		System.out.println("Hello, my name is Youkti!");
 	}
@@ -40,6 +42,9 @@ class BasicDemo {
 		double sum = sum(x, y);
 		return sum/2;
 	}*/
+	public void foo() {
+		System.out.println("\nPrint this line...");
+	}
 	public static void main(String[] arg) {
 		//print();
 		//primitives();
